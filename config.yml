@@ -1,0 +1,75 @@
+baseURL: "https://leeatchison.com"
+title: "Lee Atchison | Cloud Strategist, Thought Leader, Industry Cloud Expert"
+theme: "airspace-hugo"
+
+paginate: 4
+summaryLength: 30
+
+menu:
+  main:
+    - name: "About"
+      URL: "/about"
+      weight: 2
+    - name: "Project"
+      URL: "/project"
+      weight: 1
+    - name: "Test"
+      URL: "/test"
+      weight: 3
+  footer:
+    - name: "About"
+      URL: "/about"
+      weight: 2
+    - name: "Project"
+      URL: "/project"
+      weight: 1
+
+
+params:
+  logo: "/images/la_logo.png"
+  description: "xxx"
+  author: "Lee Atchison"
+  mobile: "123xxx456"
+  email: "xxx@email.com"
+  location: "XXX, Seattle, WA"
+  google_analitycs_id: "" # xxx
+
+  preloader:
+    enable: false
+    preloader: "" # use .png, .svg, or .gif
+  search:
+    enable: true
+  nav_button:
+    enable: true
+    label: "xxx"
+    link: "/xxx"
+
+  plugins:
+    css:
+      - link: "plugins/bootstrap/bootstrap.min.css"
+      - link: "plugins/Ionicons/css/ionicons.min.css"
+      - link: "plugins/magnific-popup/magnific-popup.css"
+      - link: "plugins/slick/slick.css"
+      # - link: "plugins/fontawesome/font-awesome.min.css"
+    js:
+      - link: "plugins/jQuery/jquery.min.js"
+      - link: "plugins/bootstrap/bootstrap.min.js"
+      - link: "plugins/slick/slick.min.js"
+      - link: "plugins/magnific-popup/jquery.magnific-popup.min.js"
+      - link: "plugins/shuffle/shuffle.min.js"
+      - link: "plugins/google-map/gmap.js"
+
+  social: #ionicon pack v2 : https://ionicons.com/v2/
+    - icon: "ion-social-linkedin-outline"
+      link: "https://linkedin.com/in/leeatchison"
+    - icon: "ion-social-twitter-outline"
+      link: "https://twitter.com/leeatchison"
+
+Languages:
+  en:
+    languageName: "En"
+    languageCode: "en-us"
+    contentDir: "content/english"
+    weight: 1
+    home: "Home"
+    copyright: "Copyright &copy; 2020 Lee Atchison. All Rights Reserved."

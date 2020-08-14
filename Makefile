@@ -8,7 +8,10 @@ develop: # Run a development server
 	@hugo server --buildDrafts --buildFuture
 
 example: # Run a development server on the example site
-	@(cd themes/bexar-hugo/exampleSite;hugo server --buildDrafts --buildFuture --port 1314 --themesDir="../..")
+	rm -rf themes/airspace-hugo/exampleSite/public
+	rm -rf themes/airspace-hugo/exampleSite/resources
+	mkdir  themes/airspace-hugo/exampleSite/public
+	@(cd themes/airspace-hugo/exampleSite;hugo server --buildDrafts --buildFuture --port 1314 --themesDir="../.." --disableFastRender)
 
 config: # Show site configuration
 	@hugo config

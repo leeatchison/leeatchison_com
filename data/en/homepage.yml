@@ -1,0 +1,121 @@
+############################### Banner ##############################
+banner:
+  enable : true
+  bg_image : "images/thecube-stage3.jpg"
+  title : "Lee Atchison"
+  content : "Cloud Strategist, Thought Leader, Industry Cloud Expert"
+  button:
+    enable : false # xxx
+    label : "Discover Our Project"
+    link : "/about" # xxx
+
+############################# About #################################
+about:
+  enable : true
+  title : "Thought Leader"
+  description: >
+    Lee Atchison is a recognized industry thought leader in cloud computing.
+    He has committed his career to architecting and building high scale, cloud-based, service oriented, SaaS applications.
+    He has a specific expertise in building highly available systems.
+  content: >
+    Lee is the author of the best selling book *[Architecting For Scale](https://architectingforscale.com)*, published by O’Reilly Media. 
+    The book, originally released in 2016, recently went through a major upgrade and was released as the second edition in 2020.
+      
+    Lee is a widely quoted thought leader in publications such as Diginomica, IT Brief, Programmable Web, CIO Review, and DZone. 
+    He has been a featured speaker at events across the globe from London to Sydney, Tokyo to Paris, and all over North America.
+      
+    You can see some of Lee's articles, publications, speaking sessions, webinars, podcasts,
+    and other content on this website.
+  image : "images/lee-prezo-shaped-592x575.jpg"
+
+
+######################### Portfolio ###############################
+portfolio:
+  enable : true
+  bg_image : "images/lee-stage-dim.jpg" # xxx change this...
+  title : "Cloud Strategist, Industry Expert"
+  content : "
+  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+
+  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+
+  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+  "
+  button:
+    enable : true
+    label : "View Works"
+    link : "project"
+
+
+############################# Service ############################
+service:
+  enable : true
+  # service content comes from "data/*/service.yml" file
+
+
+############################ call to action ###########################
+cta:
+  enable : true
+  bg_image : "images/call-to-action-bg.jpg"
+  title : "Author"
+  content : "Read more about what we do and our philosophy of design. Judge for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
+  button:
+    enable : true
+    label : "Tell Us Your Story"
+    link : "contact"
+
+############################# Funfacts ###############################
+funfacts:
+  enable : true
+  title : "Fun Facts About Lee"
+  description : "'Blah blah xxx ... Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, <br> there live the
+          blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics'"
+  funfact_item:
+    - icon : "ion-ios-book-outline" #ionicon pack v2 : https://ionicons.com/v2/
+      name : "Books Written"
+      count : "3"
+    - icon : "ion-calendar" #ionicon pack v2 : https://ionicons.com/v2/
+      name : "Years Experience"
+      count : "33"
+    - icon : "ion-ios-compose-outline" #ionicon pack v2 : https://ionicons.com/v2/
+      name : "Published Articles"
+      count : "70"
+    - icon : "ion-ios-mic-outline" #ionicon pack v2 : https://ionicons.com/v2/
+      name : "Presentations, Classes, Seminars, and more!"
+      count : "100"
+  testimonial_slider:
+    - name: Caroline Salen
+      image: "images/testimonials/caroline_salen.jpg"
+      designation: Global Director
+      content: >
+        I love working with Lee: so talented, 
+        customer centric, always well prepared, 
+        collaborative and willing to go the extra 
+        mile to make our customers successful.
+    - name: Ken Gavranovic
+      image: "images/testimonials/ken_gavranovic.jpg"
+      designation: CEO, EVP, GM
+      content: >
+        Time and time again, I have seen Lee leapfrog 
+        companies’ transformation progress in a single 
+        thirty-minute meeting.
+    - name: Greg Hampton
+      image: "images/testimonials/greg_hampton.jpg"
+      designation: CEO, Advisor
+      content: >
+        Lee is an outstanding Architect and 
+        Director / Manager. He has a passion for 
+        excellence that shows in his work and through 
+        the work of his team. On top of that he is able 
+        to led by example as his ability to develop is 
+        second to none.
+    - name: Bjorn Freeman-Benson
+      image: "images/testimonials/bjorn_freeman-benson.jpg"
+      designation: CTO, VP Engineering
+      content: >
+        I urge you, in your journey as part of this 
+        exciting explosion of new systems and products 
+        and companies, to do the same: to learn from 
+        Lee in building your systems for scale.
