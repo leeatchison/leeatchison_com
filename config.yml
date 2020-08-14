@@ -7,22 +7,34 @@ summaryLength: 30
 
 menu:
   main:
-    - name: "About"
-      URL: "/about"
+    - name: "Book"
+      URL: "/book"
       weight: 2
-    - name: "Project"
-      URL: "/project"
+    - name: "Curated Lists"
+      URL: "/lists"
+      weight: 2
+    - name: "Topics & Content"
+      URL: "/articles"
+      weight: 3
+    - name: "Articles"
+      URL: "/articles"
       weight: 1
-    - name: "Test"
-      URL: "/test"
+    - name: "Lee@Scale"
+      URL: "/atscale"
+      weight: 3
+    - name: "Podcast"
+      URL: "https://mdacast.com"
       weight: 3
   footer:
     - name: "About"
       URL: "/about"
       weight: 2
-    - name: "Project"
-      URL: "/project"
-      weight: 1
+    - name: "Lee@Scale"
+      URL: "/atscale"
+      weight: 3
+    - name: "Podcast"
+      URL: "https://mdacast.com"
+      weight: 3
 
 
 params:

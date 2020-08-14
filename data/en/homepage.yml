@@ -27,12 +27,16 @@ about:
     You can see some of Lee's articles, publications, speaking sessions, webinars, podcasts,
     and other content on this website.
   image : "images/lee-prezo-shaped-592x575.jpg"
+  button: # xxx doesn't work...
+    enable : true
+    label : "Read Lee@Scale Blog"
+    link : "/atscale" # xxx
 
 
 ######################### Portfolio ###############################
 portfolio:
   enable : true
-  bg_image : "images/lee-stage-dim.jpg" # xxx change this...
+  bg_image : "images/feature-bg.jpg" # xxx change this...
   title : "Cloud Strategist, Industry Expert"
   content : "
   Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
@@ -58,13 +62,21 @@ service:
 ############################ call to action ###########################
 cta:
   enable : true
-  bg_image : "images/call-to-action-bg.jpg"
-  title : "Author"
-  content : "Read more about what we do and our philosophy of design. Judge for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
+  xxxbg_image : "images/lee-stage.jpg"
+  bg_image : "images/afs2e180x236.png"
+  title: "Architecting for Scale"
+  content: >
+    As web applications grow, two things begin to happen. They scale to handle significantly more complicated and hence brittle, and they handle significantly larger traffic volume requiring more novel and complicated mechanisms to handle this traffic. This can lead to a death spiral for an application that can lead to brownouts, blackouts, and other quality of service and availability problems.
+      
+    This is Lee’s highly popular O’Reilly Media book, ***Architecting for Scale, Second Edition***.
+      
+    This book helps you avoid this death spiral by teaching you basic techniques for building applications that can reliably handle huge quantities of traffic, as well as huge variability in traffic without impacting the quality your customers expect.
+      
+    The second edition of the book is now available! This edition has been updated for 2020. The information has been dramatically updated and reorganized, and new information has been added on cloud computing and serverless computing. I hope you enjoy!
   button:
     enable : true
-    label : "Tell Us Your Story"
-    link : "contact"
+    label : "Learn More"
+    link : "/architectingforscale/"
 
 ############################# Funfacts ###############################
 funfacts:
