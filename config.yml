@@ -7,33 +7,59 @@ summaryLength: 30
 
 menu:
   main:
-    - name: "Book"
-      URL: "/book"
+    - name: "Topics & Content"
+      URL: "/articles"
+      weight: 1
+      hasChildren: true
+    - name: "Articles"
+      parent: "Topics & Content"
+      URL: "/articles"
+      weight: 1
+    - name: "Recordings"
+      parent: "Topics & Content"
+      URL: "/recordings"
       weight: 2
+    - name: "Presentations"
+      parent: "Topics & Content"
+      URL: "/presentations"
+      weight: 3
     - name: "Curated Lists"
       URL: "/lists"
       weight: 2
-    - name: "Topics & Content"
-      URL: "/articles"
-      weight: 3
-    - name: "Articles"
-      URL: "/articles"
+      hasChildren: true
+    - name: "Serverless"
+      parent: "Curated Lists"
+      URL: "/lists/serverless"
       weight: 1
-    - name: "Lee@Scale"
-      URL: "/atscale"
-      weight: 3
-    - name: "Podcast"
-      URL: "https://mdacast.com"
-      weight: 3
-  footer:
-    - name: "About"
-      URL: "/about"
+    - name: "Microservices"
+      parent: "Curated Lists"
+      URL: "/lists/services-and-microservices"
       weight: 2
+    - name: "Risk Management"
+      parent: "Curated Lists"
+      URL: "/lists/risk-management"
+      weight: 3
+    - name: "Classes"
+      URL: "/classes"
+      weight: 3
+    - name: "Book"
+      URL: "/book"
+      weight: 4
     - name: "Lee@Scale"
       URL: "/atscale"
-      weight: 3
+      weight: 5
     - name: "Podcast"
       URL: "https://mdacast.com"
+      weight: 6
+  footer:
+    - name: "Media Info"
+      URL: "/mediainfo"
+      weight: 1
+    - name: "Contact Lee"
+      URL: "/contact"
+      weight: 2
+    - name: "Subscribe"
+      URL: "/subscribe"
       weight: 3
 
 
