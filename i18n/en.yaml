@@ -20,3 +20,5 @@
   translation: Continue Reading
 - id: related_content
   translation: Related
+- id: rest_of_article
+  translation: Read the entire article in
