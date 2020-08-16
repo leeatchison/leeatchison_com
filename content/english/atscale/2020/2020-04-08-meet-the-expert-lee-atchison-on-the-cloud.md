@@ -3,7 +3,6 @@ title: Meet the Expert Lee Atchison on the Cloud
 date: 2020-04-08
 author: Lee Atchison
 type: post
-draft: true
 image: /images/atscale/meet-the-expert-lee.png
 description: 
 categories:

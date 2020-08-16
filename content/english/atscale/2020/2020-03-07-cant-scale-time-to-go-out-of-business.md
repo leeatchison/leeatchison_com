@@ -3,7 +3,6 @@ title: "Can't Scale? Time to Go Out of Business"
 date: 2020-03-07
 author: Lee Atchison
 type: post
-draft: true
 image: /images/atscale/life-preserver.png
 description: 
 categories:
