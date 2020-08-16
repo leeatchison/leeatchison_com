@@ -1,0 +1,2 @@
+{{$id:=""}}{{if .Get "id"}}{{$id = .Get "id"}}{{else}}{{$id = .Page.Params.mda_episode_id}}{{end}}
+<div style="width: 100%; height: 170px; margin-bottom: 20px; border-radius: 10px; overflow: hidden;"><iframe style="width: 100%; height: 170px;" frameborder="no" scrolling="no" allow="autoplay"  seamless src="https://player.captivate.fm/episode/{{$id}}"></iframe></div>
