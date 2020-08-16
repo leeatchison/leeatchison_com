@@ -35,10 +35,9 @@ I contributed two predictions that were published in the series.<!--more--> Here
 
 Cloud management and control is going to be important. Before, it was "move to the cloud at all costs." In 2019, the "at all costs" part will go away, and cloud waste management will become more important.
 
-<a href="https://www.devopsdigest.com/2019-devops-predictions-7" target="_blank">Published in 2019 DevOps Predictions - Part 7</a>
+* {{<extlink url="https://www.devopsdigest.com/2019-devops-predictions-7">}}Published in 2019 DevOps Predictions - Part 7{{</extlink>}}
 
 ## Microservice Challenges
 In 2019, we will start to see the determinants of rushing to adopt microservices. One danger of moving to service-based architecture is people don't fully understand how large services can become. There are groups creating microservice architecture that instead of one monolith system, they created 10 monolith systems. This makes their services too large and doesn't fix the problems of a monolith. On the other hand, those services might make your services too small, which means all your complexity goes from being a team problem to a system problem that's harder than your average developer to understand.
 
-<a href="https://www.devopsdigest.com/2019-devops-predictions-8" target="_blank">Published in 2019 DevOps Predictions - Part 8</a>
-
+* {{<extlink url="https://www.devopsdigest.com/2019-devops-predictions-8">}}Published in 2019 DevOps Predictions - Part 8{{</extlink>}}
