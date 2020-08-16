@@ -1,0 +1,3 @@
+User-agent: *
+{{range .Pages}}{{if .Params.robotsnoindex}}
+Disallow: {{.RelPermalink}}{{end}}{{end}}
