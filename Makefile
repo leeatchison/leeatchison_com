@@ -1,10 +1,17 @@
 help:   # Shows all available Make commands
-	@cat Makefile | grep '^[^ ]*:' | grep -v '.PHONY' | grep -v help | sed 's/:.*#/#/' | column -s "#" -t
+	@echo "Make commands:"
+	@cat Makefile | grep '^[^ ]*:' | grep -v '.PHONY' | grep -v help | sed 's/:.*#/#/' | column -s "#" -t | sed 's/^/    make /'
+	@echo "New blog post:"
+	@echo "    hugo new atscale/YYYY/YYYY-MM-DD-the-article-title.md"
+	@echo "New MDA Episode:"
+	@echo "    hugo new -k mda atscale/mda/mda##-the-episode-title.md"
 
 version:  # Returns version of Hugo currently running
 	@hugo version
 
 develop: # Run a development server
+	@rm -rf ./public/ ./resources/
+	@mkdir ./public/
 	@hugo server --buildDrafts --buildFuture
 
 example: # Run a development server on the example site
@@ -16,9 +23,20 @@ example: # Run a development server on the example site
 config: # Show site configuration
 	@hugo config
 
+env: # Show Hugo Environment
+	@hugo env
+
+drafts: # Show list of draft posts
+	@hugo list drafts
+
+future: # Show list of future posts
+	@hugo list future
+
 cleanup: # Clean up resources and public directory
 	@rm -rf ./public/ ./resources/
 	@mkdir ./public/
 
 build: # Production build
+	@rm -rf ./public/ ./resources/
+	@mkdir ./public/
 	@hugo --gc --minify
