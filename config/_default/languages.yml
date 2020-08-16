@@ -1,0 +1,7 @@
+en:
+  languageName: "En"
+  languageCode: "en-us"
+  contentDir: "content/english"
+  weight: 1
+  home: "Home"
+  copyright: "Copyright &copy; 2020 Lee Atchison. All Rights Reserved."

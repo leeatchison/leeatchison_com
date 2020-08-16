@@ -1,0 +1,10 @@
+title: "Lee Atchison | Cloud Strategist, Thought Leader, Industry Cloud Expert"
+theme: "airspace-hugo"
+paginate: 10
+summaryLength: 30
+permalinks:
+  atscale: /atscale/:year/:month/:day/:title/
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+enableRobotsTXT: true

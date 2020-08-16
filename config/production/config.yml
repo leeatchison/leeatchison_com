@@ -1,0 +1,3 @@
+baseURL: "https://leeatchison.com"
+buildDrafts: false
+buildFuture: false

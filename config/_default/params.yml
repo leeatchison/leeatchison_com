@@ -1,0 +1,37 @@
+logo: "/images/la_logo.png"
+description: "aaaxxx"
+author: "Lee Atchison"
+mobile: "123xxx456"
+email: "xxx@email.com"
+location: "XXX, Seattle, WA"
+preloader:
+  enable: false
+  preloader: "" # use .png, .svg, or .gif
+search:
+  enable: true
+nav_button:
+  enable: true
+  label: "xxx"
+  link: "/xxx"
+images:
+  - /images/lee-prezo-shaped-592x575.jpg
+plugins:
+  css:
+    - link: "plugins/bootstrap/bootstrap.min.css"
+    - link: "plugins/Ionicons/css/ionicons.min.css"
+    - link: "plugins/magnific-popup/magnific-popup.css"
+    - link: "plugins/slick/slick.css"
+    # - link: "plugins/fontawesome/font-awesome.min.css"
+  js:
+    - link: "plugins/jQuery/jquery.min.js"
+    - link: "plugins/bootstrap/bootstrap.min.js"
+    - link: "plugins/slick/slick.min.js"
+    - link: "plugins/magnific-popup/jquery.magnific-popup.min.js"
+    - link: "plugins/shuffle/shuffle.min.js"
+    - link: "plugins/google-map/gmap.js"
+
+social: #ionicon pack v2 : https://ionicons.com/v2/
+  - icon: "ion-social-linkedin-outline"
+    link: "https://linkedin.com/in/leeatchison"
+  - icon: "ion-social-twitter-outline"
+    link: "https://twitter.com/leeatchison"
