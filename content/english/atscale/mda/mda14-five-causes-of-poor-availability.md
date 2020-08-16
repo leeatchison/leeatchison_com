@@ -12,6 +12,7 @@ image: /images/atscale/mda-banner.png
 bg_image: "images/thecube-stage3.jpg"
 description: 
 categories:
+  - MDA Podcast
   - Podcast
 tags:
   - Modern Digital Applications
@@ -31,6 +32,9 @@ The following are links mentioned in this episode, and links to related informat
 * Modern Digital Applications Website (https://mdacast.com)
 * Lee Atchison Articles and Presentations (https://leeatchison.com)
 * Architecting for Scale, published by O’Reilly Media (https://architectingforscale.com)
+
+&nbsp;
+{{<mdasubscribe>}}
 
 ## Episode
 

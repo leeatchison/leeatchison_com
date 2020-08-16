@@ -41,7 +41,7 @@ main:
     URL: "/atscale"
     weight: 5
   - name: "Podcast"
-    URL: "https://mdacast.com"
+    URL: "/mda"
     weight: 6
 footer:
   - name: "Media Info"
