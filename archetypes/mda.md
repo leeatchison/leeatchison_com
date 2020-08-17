@@ -20,7 +20,7 @@ tags:
   - xxx
 ---
 
-## Episode #<num> -- <title>
+## Episode #{{replaceRE "^mda(\\d*)-.*" "$1" .Name}} -- {{ replace .Name "-" " " | replaceRE "^mda\\d* (.*)" "$1" | title }}
 
 <top description>
 
