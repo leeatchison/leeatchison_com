@@ -1,5 +1,8 @@
 a{
   color: #a0522c;
+  &:hover{
+    color: #3b91c0;
+  }
 }
 .post-content,.post-related{
   ul,ol{
