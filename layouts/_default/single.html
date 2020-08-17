@@ -35,7 +35,7 @@
               <li><i class="ion-android-people"></i> {{ i18n "posted_by" }} <a class="text-primary" href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}">{{ .Params.Author }}</a></li>
               <li><i class="ion-pricetags"></i> 
                 {{ range $index, $elements:= .Params.Tags }}
-                {{ if ne $index 0 }}, {{ end }}<a href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
+                {{ if ne $index 0 }}, {{ end }}<a href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}">{{ . }}</a>
 								{{ end }}
               </li>
             </ul>
