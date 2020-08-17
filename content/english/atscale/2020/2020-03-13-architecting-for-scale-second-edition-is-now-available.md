@@ -8,7 +8,7 @@ description:
 categories:
   - Article
 tags:
-  - Scaling
+  - Scalability
   - Availability
   - Architecting for Scale
 related:

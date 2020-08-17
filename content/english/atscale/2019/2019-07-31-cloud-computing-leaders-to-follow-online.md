@@ -5,7 +5,7 @@ author: Lee Atchison
 image: /images/uploads/ken-and-lee-risk-matrix-mp4.png
 excerpt_separator: <!--more-->
 tags:
-  - ArchitectingForScale
+  - Architecting For Scale
   - Cloud
 description: "I'm proud to make this list of Cloud Computing Leaders to Follow Online."
 type: post

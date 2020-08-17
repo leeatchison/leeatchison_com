@@ -10,7 +10,7 @@ categories:
   - Presentation
 tags:
   - Cloud
-  - Scaling
+  - Scalability
   - Architecting for Scale
 continue:
   msg: Click here for more information and to register

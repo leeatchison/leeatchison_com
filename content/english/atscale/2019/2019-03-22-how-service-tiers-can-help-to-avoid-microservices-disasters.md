@@ -8,7 +8,7 @@ image: >-
   /images/uploads/how-service-tiers-can-help-to-avoid-microservices-disasters/260fd66d-desert-897662-1920-1024x685-1.jpg
 excerpt_separator: <!--more-->
 tags:
-  - ArchitectingForScale
+  - Architecting For Scale
   - Availability
   - Microservices
   - Services
