@@ -14,9 +14,13 @@
   <link rel="stylesheet" href="{{ .link | absURL }}">
   {{ end }}
 
-  {{ "<!-- Main Stylesheet -->" | safeHTML }}
+  {{ "<!-- Main Theme Stylesheet -->" | safeHTML }}
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+
+  {{ "<!-- App Stylesheet -->" | safeHTML }}
+  {{ $maincss := resources.Get "scss/main.scss" | toCSS | minify }}
+  <link rel="stylesheet" href="{{ $maincss.Permalink }}" media="screen">
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
