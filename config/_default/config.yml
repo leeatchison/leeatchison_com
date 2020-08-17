@@ -4,6 +4,7 @@ paginate: 10
 summaryLength: 30
 permalinks:
   atscale: /atscale/:year/:month/:day/:title/
+  project: /classes/:title/
 sitemap:
   changefreq: monthly
   priority: 0.5
