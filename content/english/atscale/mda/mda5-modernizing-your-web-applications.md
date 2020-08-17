@@ -13,7 +13,6 @@ bg_image: "images/thecube-stage3.jpg"
 description: 
 categories:
   - MDA Podcast
-  - Podcast
 tags:
   - Modern Digital Applications
 ---
