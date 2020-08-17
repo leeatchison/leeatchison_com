@@ -1,5 +1,12 @@
 logo: "/images/la_logo.png"
-description: "aaaxxx"
+description: >
+  Join cloud expert Lee Atchison to learn best practices and understand key challenges you may face 
+  when moving a modern software application to the cloud. Lee explains what systemic changes are 
+  needed in your company culture to support running in the cloud and walks you through modern 
+  software development processes that will help ensure your migration is a success. 
+  You’ll discover how to improve visibility into the inner workings of your application 
+  to speed up the migration process and learn risk management techniques to optimize your 
+  migration success.
 author: "Lee Atchison"
 mobile: "123xxx456"
 email: "xxx@email.com"

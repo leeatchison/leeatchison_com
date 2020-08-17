@@ -1,55 +1,51 @@
 main:
   - name: "Topics & Content"
-    URL: "/articles"
+    URL: "/categories/article/"
     weight: 1
     hasChildren: true
   - name: "Articles"
     parent: "Topics & Content"
-    URL: "/articles"
+    URL: "/categories/article/"
     weight: 1
-  - name: "Recordings"
-    parent: "Topics & Content"
-    URL: "/recordings"
-    weight: 2
   - name: "Presentations"
     parent: "Topics & Content"
-    URL: "/presentations"
-    weight: 3
+    URL: "/categories/presentation/"
+    weight: 2
   - name: "Curated Lists"
-    URL: "/lists"
+    URL: "/lists/"
     weight: 2
     hasChildren: true
   - name: "Serverless"
     parent: "Curated Lists"
-    URL: "/lists/serverless"
+    URL: "/lists/serverless/"
     weight: 1
   - name: "Microservices"
     parent: "Curated Lists"
-    URL: "/lists/services"
+    URL: "/lists/services/"
     weight: 2
   - name: "Risk Management"
     parent: "Curated Lists"
-    URL: "/lists/risk-management"
+    URL: "/lists/risk-management/"
     weight: 3
   - name: "Classes"
-    URL: "/classes"
+    URL: "/classes/"
     weight: 3
   - name: "Book"
-    URL: "/book"
+    URL: "/architectingforscale/"
     weight: 4
   - name: "Lee@Scale"
-    URL: "/atscale"
+    URL: "/atscale/"
     weight: 5
   - name: "Podcast"
-    URL: "/mda"
+    URL: "/mda/"
     weight: 6
 footer:
   - name: "Media Info"
-    URL: "/mediainfo"
+    URL: "/mediainfo/"
     weight: 1
   - name: "Contact Lee"
-    URL: "/contact"
+    URL: "/contact/"
     weight: 2
   - name: "Subscribe"
-    URL: "/subscribe"
+    URL: "/subscribe/"
     weight: 3
