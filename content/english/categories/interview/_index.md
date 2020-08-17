@@ -1,3 +1,5 @@
 ---
 title: "Interviews"
+aliases:
+  - /interviews/
 ---

@@ -7,10 +7,14 @@ main:
     parent: "Topics & Content"
     URL: "/categories/article/"
     weight: 1
+  - name: "Interviews"
+    parent: "Topics & Content"
+    URL: "/categories/interview/"
+    weight: 2
   - name: "Presentations"
     parent: "Topics & Content"
     URL: "/categories/presentation/"
-    weight: 2
+    weight: 3
   - name: "Curated Lists"
     URL: "/lists/"
     weight: 2
@@ -40,12 +44,15 @@ main:
     URL: "/mda/"
     weight: 6
 footer:
+  - name: "About Lee"
+    URL: "/about/"
+    weight: 1
   - name: "Media Info"
     URL: "/mediainfo/"
-    weight: 1
+    weight: 2
   - name: "Contact Lee"
     URL: "/contact/"
-    weight: 2
+    weight: 3
   - name: "Subscribe"
     URL: "/subscribe/"
-    weight: 3
+    weight: 4
