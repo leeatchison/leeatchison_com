@@ -8,3 +8,7 @@ sitemap:
   changefreq: monthly
   priority: 0.5
 enableRobotsTXT: true
+
+taxonomies:
+  category: categories
+  tag: tags
