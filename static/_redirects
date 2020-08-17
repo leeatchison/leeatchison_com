@@ -1,3 +1,5 @@
 /* /404.html 404
 /la https://leeatchison.com 302
 /atchisontechnology https://atchisontechnology.com 302
+/%20architectingforscale/ /architectingforscale/ 301
+/book/ /architectingforscale/ 302
