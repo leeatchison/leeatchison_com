@@ -56,3 +56,6 @@ footer:
   - name: "Subscribe"
     URL: "/subscribe/"
     weight: 4
+  - name: Atchison Technology LLC
+    URL: "https://atchisontechnology.com"
+    weight: 5

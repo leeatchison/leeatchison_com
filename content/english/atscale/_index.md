@@ -5,6 +5,8 @@ draft: false
 bg_image: "images/thecube-stage3.jpg"
 cascade:
   bg_image: "images/lee-stage.jpg"
+aliases:
+  - /type/atscale/
 sitemap:
   changefreq: daily
   priority: 0.9

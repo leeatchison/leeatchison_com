@@ -93,3 +93,40 @@ section.curated-page{
     }
   }
 }
+.mediainfo-headshots{
+  text-align: left;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  h3{
+    color: #a0522c;
+  }
+  table{
+    tr.headshot-images{
+      text-align: center;
+      td{
+        padding: 5px;
+      }
+    }
+    tr.headshot-title{
+      text-align: center;
+    }
+  }
+}
+.mediainfo-more-info{
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #eee;
+  .mediainfo-infobox{
+    padding: 15px;
+    background-color: #eee;
+    border-radius: 20px;
+  }
+  .mediainfo-form{
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+}
