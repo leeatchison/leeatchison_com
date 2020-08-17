@@ -4,7 +4,7 @@ a{
     color: #3b91c0;
   }
 }
-.post-content,.post-related{
+.project-content,.post-content,.post-related{
   ul,ol{
     list-style-type: disc;
     li{
@@ -47,6 +47,49 @@ section.book-download-content{
     list-style-type: disc;
     li{
       margin-left: 20px;
+    }
+  }
+}
+section.curated-page{
+  .curated-title{
+    text-align: left;
+  }
+  .curated-info{
+    color: #888;
+    p{
+      color: inherit;
+    }
+  }
+  .curated-list{
+    .curated-entry{
+      margin-bottom: 20px;
+      img{
+        width: 150px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      h3{
+        color: #a0522c;
+      }
+      .curated-entry-link{
+        font-size: .9em;
+        text-align: center;
+      }
+    }
+    .curated-entry-odd{
+      img{
+        float: right;
+      }
+    }
+    .curated-entry-even{
+      img{
+        float: left;
+      }
+    }
+    .curated-entry-error{
+      color: red;
+      text-align: center;
+      font-size: 2em;
     }
   }
 }

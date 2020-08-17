@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section class="page-wrapper curated-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<h2 class="curated-title">{{ .Title }}</h2>
+				<section class="curated-info">
+					{{ .Content }}
+				</section>
+				<section class="curated-list">
+					{{ $odd := true}}
+					{{ range .Params.list }}
+						{{ $page := site.GetPage .uri }}
+						{{ with $page }}
+							<hr width="80%">
+							<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
+								<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+								{{ with .Params.image }}
+									<img src="{{.}}"/>
+								{{ end }}
+								<div class="curated-entry-summary">{{ .Summary }}</div>
+								<div class="curated-entry-link"><a href="{{ .Permalink }}">Click here to read more</a></div>
+								</section>
+						{{ else }}
+							<hr width="80%">
+							<section class="clearfix curated-entry curated-entry-error">
+								<div>Invalid page.</div>
+							</section>
+						{{ end }}
+					{{ end }}
+				</section>
+			</div>
+			<div class="col-md-4">
+				<section class="curated-list-list">
+					<h3>List of curated lists</h3>
+					{{ range .Site.RegularPages }}
+						{{ if eq .Type "curated" }}
+							<div>
+								<a href="{{ .Permalink }}">{{ .Title }}</a>
+							</div>
+						{{ end }}
+					{{ end }}
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+
+{{ end }}

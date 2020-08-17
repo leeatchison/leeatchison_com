@@ -21,10 +21,6 @@ related:
     article_url: "https://leeatchison.com/2019/06/05/risk-management-avoiding-availability-disasters-in-service-based-applications/"
   - name: Modern Digital Applications Podcast
     article_url: "https://mdacast.com/"
-
-
-
-
 ---
 
 Bringing down an entire application is easy. All it takes is the failure of a single service and the entire set of services that make up the application can come crashing down like a house of cards. Just one minor error from a non-critical service can be disastrous to the entire application.

@@ -25,7 +25,7 @@ main:
     weight: 1
   - name: "Microservices"
     parent: "Curated Lists"
-    URL: "/lists/services-and-microservices"
+    URL: "/lists/services"
     weight: 2
   - name: "Risk Management"
     parent: "Curated Lists"
