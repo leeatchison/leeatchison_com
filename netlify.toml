@@ -19,12 +19,3 @@ command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.73.0"
 
-[[redirects]]
-  from = "/la"
-  to = "https://leeatchison.com"
-  status = 302
-
-[[redirects]]
-  from = "/atchisontechnology"
-  to = "https://atchisontechnology.com"
-  status = 302
