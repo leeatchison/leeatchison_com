@@ -5,8 +5,10 @@ date: 2019-07-27
 draft: false
 image : "images/presentations/ken_and_lee_risk_matrix.png"
 bg_image: "images/presentations/ken_and_lee_risk_matrix.png"
+category: Interview
 categories:
   - Presentation
+weight: 2
 ---
 
 Want to reduce MTTR, reduce incidents and have a data driven discussion on investment allocation?

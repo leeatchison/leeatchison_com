@@ -5,8 +5,10 @@ date: 2016-07-13
 draft: false
 image : "images/presentations/thecube16.png"
 bg_image: "images/presentations/thecube16.png"
+category: Interview
 categories:
   - Presentation
+weight: 3
 ---
 
 Do companies really need a hybrid cloud? | #AWSSummit

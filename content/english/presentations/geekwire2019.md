@@ -5,8 +5,10 @@ date: 2019-08-15
 draft: false
 image : "images/presentations/geekwire2019.png"
 bg_image: "images/presentations/geekwire2019.png"
+category: Keynote
 categories:
   - Presentation
+weight: 1
 ---
 
 Lee Atchison, Senior Director, Strategic Architecture at New Relic, speaks on the DevOps track at the 2019 GeekWire Cloud Summit.

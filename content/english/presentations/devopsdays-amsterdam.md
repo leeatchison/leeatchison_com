@@ -5,8 +5,10 @@ date: 2018-07-08
 draft: false
 image : "images/presentations/devopsdays-amsterdam-2018.png"
 bg_image: "images/presentations/devopsdays-amsterdam-2018.png"
+category: Keynote
 categories:
   - Presentation
+weight: 4
 ---
 
 Monitoring applications running in a typical data center is a pretty static process. Monitoring in the cloud is a very different endeavor. Why? The dynamic nature of cloud computing makes keeping track of resources being monitored a non-trivial activity. Additionally, examining the dynamic changes of the cloud environment itself is a valuable tool for detecting and diagnosing problems, yet often is difficult to actually accomplish in a useful and compelling way.
