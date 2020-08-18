@@ -2,8 +2,8 @@
 title: "Learning Path – Risk Management"
 description: "Microservices Risk Management - Building Apps that Scale"
 draft: false
-image : "images/classes/oreilly-lp-risk-management.jpg"
-bg_image: "images/classes/oreilly-lp-risk-management.jpg"
+image : "/images/classes/oreilly-lp-risk-management.jpg"
+bg_image: "/images/classes/oreilly-lp-risk-management.jpg"
 category: "On Demand"
 information:
   - label : "Host"

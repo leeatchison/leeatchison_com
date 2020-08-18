@@ -13,21 +13,33 @@
 				<section class="curated-list">
 					{{ $odd := true}}
 					{{ range .Params.list }}
-						{{ $page := site.GetPage .uri }}
-						{{ with $page }}
-							<hr width="80%">
-							<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
-								<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-								{{ with .Params.image }}
-									<img src="{{.}}"/>
-								{{ end }}
-								<div class="curated-entry-summary">{{ .Summary }}</div>
-								<div class="curated-entry-link"><a href="{{ .Permalink }}">Click here to read more</a></div>
+						{{ if .uri }}
+							{{ $page := site.GetPage .uri }}
+							{{ with $page }}
+								<hr width="80%">
+								<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
+									<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+									{{ with .Params.image }}
+										<img src="{{.}}"/>
+									{{ end }}
+									<div class="curated-entry-summary">{{ .Summary }}</div>
+									<div class="curated-entry-link"><a href="{{ .Permalink }}">Click here to read more</a></div>
+									</section>
+							{{ else }}
+								<hr width="80%">
+								<section class="clearfix curated-entry curated-entry-error">
+									<div>Invalid page.</div>
 								</section>
+							{{ end }}
 						{{ else }}
 							<hr width="80%">
-							<section class="clearfix curated-entry curated-entry-error">
-								<div>Invalid page.</div>
+							<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
+								<h3><a href="{{ .url }}" target="_blank">{{ .title }}</a></h3>
+								{{ with .image }}
+									<img src="{{.}}"/>
+								{{ end }}
+								<div class="curated-entry-summary">{{ .summary }}</div>
+								<div class="curated-entry-link"><a href="{{ .url }}" target="_blank">Click here to read more</a></div>
 							</section>
 						{{ end }}
 					{{ end }}
@@ -44,6 +56,15 @@
 						{{ end }}
 					{{ end }}
 				</section>
+				<div class="AW-Form-1289770397"></div>
+				<script type="text/javascript">(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//forms.aweber.com/form/97/1289770397.js";
+						fjs.parentNode.insertBefore(js, fjs);
+						}(document, "script", "aweber-wjs-87vb5fytj"));
+				</script>    
 			</div>
 		</div>
 	</div>
