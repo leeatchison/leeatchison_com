@@ -5,6 +5,7 @@ author: Lee Atchison
 type: post
 image: /images/devops-toolchain-300x170.png
 excerpt_separator: <!--more-->
+url: /atscale/2018/07/30/continuous-discussions-c9d9-podcast-episode-89-the-devops-toolchain/
 tags:
   - Scalability
   - Architecture
