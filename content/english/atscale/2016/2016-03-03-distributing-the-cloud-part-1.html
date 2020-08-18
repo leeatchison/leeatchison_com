@@ -1,0 +1,120 @@
+---
+title: Distributing the Cloud - AWS Architecture - Part 1
+date: 2016-03-03
+author: Lee Atchison
+type: post
+categories:
+  - Article
+image: /images/blog/cloud-distributed-aws-structure.png
+sitemap:
+  changefreq: 'monthly'
+  priority: 0.8
+tags:
+  - Cloud
+  - Hybrid Cloud
+  - Scalability
+  - Availability
+---
+
+<p>We all know the value of distributing an application across multiple data centers. The same philosophy applies to the cloud. As we put our applications into the cloud we need to watch where in the cloud they are located. How <em>geographically</em> and <em>network topologically</em> distributed our applications are is just as important as with normal data centers.</p>
+<p>However, the cloud makes knowing where your application is located harder. The cloud also makes it harder to proactively make your application more distributed. Some cloud providers don’t even expose enough information to let you know where, geographically, your application is running.</p>
+<p>Luckily, larger providers like AWS are better. No, AWS won't tell you specifically where, geographically, your application is running, since they do not disclose their actual data center locations (I worked at AWS, and I have no idea, specifically, where the data centers are located). While they won’t tell you specifically where your application is running, they do give you enough information to make diversification decisions. Interpreting and understanding this information, and using it to your advantage, requires an understanding of how AWS is architected.</p>
+<!--more-->
+<h2> AWS Architecture</h2>
+<p>First, let’s discuss some terms used within the AWS ecosystem.</p>
+<h3>AWS Region</h3>
+<p>An AWS Region is large area of cloud resources that represents a specific geographic area. In general, they represent a portion of an individual continent or country (such as Western Europe, Northeastern Asia-Pacific, and Eastern United States). They describe and document geographic diversity of cloud resources. They are typically composed of multiple Availability Zones (AZs).</p>
+<p>An AWS Region is identified by a string representing it’s geographic location. Table 1 gives the current list of AWS regions, their names, and where they serve.</p>
+<table style="margin-left: auto; margin-right: auto;" border="1">
+<thead>
+<tr style="text-align: center;">
+<th>Region Name</th>
+<th>Geographic Area Covered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>us-east-1</td>
+<td>US East Coast (N. Virginia)</td>
+</tr>
+<tr>
+<td>us-west-1</td>
+<td>US West Coast (N. California)</td>
+</tr>
+<tr>
+<td>us-west-2</td>
+<td>US West Clast (Oregon)</td>
+</tr>
+<tr>
+<td>eu-west-1</td>
+<td>EU (Ireland)</td>
+</tr>
+<tr>
+<td>eu-central-1</td>
+<td>EU (Frankfurt)</td>
+</tr>
+<tr>
+<td>ap-northeast-1</td>
+<td>Asia Pacific (Tokyo)</td>
+</tr>
+<tr>
+<td>ap-northeast-2</td>
+<td>Asia Pacific (Seoul)</td>
+</tr>
+<tr>
+<td>ap-southeast-1</td>
+<td>Asia Pacific (Singapore)</td>
+</tr>
+<tr>
+<td>ap-southeast-2</td>
+<td>Asia Pacific (Sydney)</td>
+</tr>
+<tr>
+<td>sa-east-1</td>
+<td>South America (Sao Paulo)</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">Table 1: AWS Regions</p>
+<h3>AWS Availability Zone</h3>
+<p>An AWS Availability Zone is a subset of an AWS Region that represents cloud resources within a specific portion of a region, but are network topographically isolated from each other. They describe and document network topographical diversity of cloud resources. If two cloud resources are in different availability zones, then they can be assumed to be in distinct data centers, even if they are in the same AWS Region. If two cloud resources are in the same availability zone, they may potentially both be in the same data center, floor, rack, or even physical server.</p>
+<p>An AWS Availability Zone is identified by a string beginning with the name of the region the AZ is in, followed by a letter 'a'-'z'. For example, Table 2 shows some example availability zones and the regions they are in.</p>
+<table style="margin-left: auto; margin-right: auto;" border="1">
+<thead>
+<tr style="text-align: center;">
+<th>Region Name</th>
+<th>Availability Zone Names</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>us-east-1</td>
+<td>us-east-1a<br />us-east-1b<br />us-east-1c<br />us-east-1d<br />us-east-1e</td>
+</tr>
+<tr>
+<td>us-west-1</td>
+<td>us-west-1a<br />us-west-1b</td>
+</tr>
+<tr>
+<td>us-west-2</td>
+<td>us-west-2a<br />us-west-2b</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">Table 2: AWS Availability Zone Names</p>
+<h3>Data Center</h3>
+<p>This is not a term used within AWS vocabulary, but we will use it as we map typical non-cloud terminology into AWS terminology.</p>
+<p>A data center is a specific floor, building, or group of buildings that constitute a single location of system resources, such as servers. </p>
+<h2>Architecture Overview</h2>
+<p>Figure 1 shows at a high level what the AWS cloud architecture looks like.</p>
+<p> </p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/blog/cloud-distributed-aws-structure.png" alt="" width="600" /> </p>
+<p style="text-align: center;">Figure 1: AWS Data Center Architecture</p>
+<p> </p>
+<p>AWS is composed of several AWS Regions (or just regions), which are geographically distributed around the globe in order to provide high quality access to most locations in the world. The AWS Regions each have connections to the internet. The AWS Regions themselves are also connected between themselves, but using long distance network connections similar to the rest of the internet.</p>
+<p>Within a single region, there are multiple availability zones. These AZs are connected via an extremely high speed network, in order to make access between any two servers within a single region be very fast, independent of which availability zone they are actually located in.</p>
+<p>In other words, AWS is designed to make a<em>vailability zones</em> as transparent as possible, but <em>regions</em> as visible as possible.</p>
+<p>In the part 2 of this article, we'll discuss availability zones and their connection to data centers, along with techniques for maintaining location diversity within an AWS environment.</p>
+<h3>Architecting for Scale</h3>
+<p>Want to learn more about this and other topics in availability, scalability, and cloud computing? Get my book, <a href="http://oreil.ly/1HbPMpb" target="_blank">Architecting for Scale</a>, published by O'Reilly Media.</p>
+<p> </p>

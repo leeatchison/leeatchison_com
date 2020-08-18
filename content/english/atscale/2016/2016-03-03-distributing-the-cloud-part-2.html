@@ -1,0 +1,48 @@
+---
+title: Distributing the Cloud - AWS Architecture - Part 2
+date: 2016-03-03
+author: Lee Atchison
+type: post
+categories:
+  - Article
+image: /images/blog/cloud-distributed-customer-app.png
+sitemap:
+  changefreq: 'monthly'
+  priority: 0.8
+tags:
+  - Cloud
+  - Hybrid Cloud
+  - Scalability
+  - Availability
+---
+
+<p>We all know the value of distributing an application across multiple data centers. The same philosophy applies to the cloud. As we put our applications into the cloud we need to watch where in the cloud they are located. How <em>geographically</em> and <em>network topologically</em> distributed our applications are is just as important as with normal data centers.</p>
+<p>While Amazon AWS won’t tell you specifically where your application is running, they do give you enough information to make diversification decisions. Interpreting and understanding this information, and using it to your advantage, requires an understanding of how AWS is architected.</p>
+<p>In part 1 of this article, we talked about the AWS Architecture of regions and availability zones. In part 2, we will go into more detail about how availability zones are structured, and how we can utilize this information.</p>
+<!--more-->
+<p>First, a bit of recap. </p>
+<p>Figure 1 shows at a high level what the AWS cloud architecture looks like.</p>
+<p> </p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/blog/cloud-distributed-aws-structure.png" alt="" width="600" /> </p>
+<p style="text-align: center;">Figure 1: AWS Data Center Architecture</p>
+<p> </p>
+<p>AWS is composed of several AWS Regions, which are geographically distributed around the globe in order to provide high quality access to most locations in the world. The AWS Regions each have connections to the internet. The AWS Regions themselves also are connected between themselves, but using long distance network connections similar to the rest of the internet.</p>
+<p>Within a single region, there are multiple availability zones. These AZs are connected via an extremely high speed network, in order to make access between any two servers within a single region be very fast, independent of which availability zone they are actually located in.</p>
+<p>A given availability zone is composed of one or more data centers, depending on the size of the availability zone.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/blog/cloud-distributed-network.png" alt="" /></p>
+<p style="text-align: center;">Figure 2: AWS Region and AZ Network Performance</p>
+<p>Figure 2 shows the network topography within a region. As you can see, AWS is designed to make it easy to build an application within a single region but distributed across availability zones. This distribution is designed to give redundant systems failover opportunities in light of problems with individual data centers, while maintaining the ability for the independent components to communicate with each other transparently without regard to the availability zone they are in.</p>
+<p>However, regions are designed so that an entire application should be contained within a single region, and not require high speed communications with components contained in other regions. Instead, if an application wants to be in multiple regions, multiple copies of the application are typically run independently, one copy within each region desired. This allows individual geographic regions to have access to an instance of an application locally, without suffering the cost of long distance communications links. This is shown in Figure 3.</p>
+<p> <img style="display: block; margin-left: auto; margin-right: auto;" src="/images/blog/cloud-distributed-customer-app.png" alt="" /></p>
+<p style="text-align: center;">Figure 3: Customer Architecture</p>
+<p>This model is supported by the AWS network traffic costing model, which typically allows traffic between availability zones within a single region to be free, while traffic destined between regions or out from a region to the internet to be charged appropriately.</p>
+<p>This architecture is important not only from a cost standpoint, but from a latency standpoint, since region-to-region network latency is higher than AZ-to-AZ latency. Additionally, the regions high level geographic location is well known, so your application can support governmental regulations, such as those required by EU Safe Harbor.</p>
+<h2>Availability Zones And Data Centers</h2>
+<p>It is important to note that selecting a particular availability zone is not the same thing as picking a particular data center. Not only is this because a single availability zone can be composed of multiple data centers, but because:</p>
+<p style="padding-left: 30px;"><em>Your AZ us-east-1a is not the same availability zone as my us-east-1a</em></p>
+<p>That's right, you and I have a different view of what data centers a particular availability zone is located in. We will discuss this, and the ramifications of this, in the part 3 of this article.</p>
+<h3>Architecting for Scale</h3>
+<p>Want to learn more about this and other topics in availability, scalability, and cloud computing? Get my book, <a href="http://oreil.ly/1HbPMpb" target="_blank">Architecting for Scale</a>, published by O'Reilly Media.</p>
+<p> </p>
+<p> </p>
+<p> </p>

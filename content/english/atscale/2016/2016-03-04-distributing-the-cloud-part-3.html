@@ -1,0 +1,128 @@
+---
+title: Distributing the Cloud - AWS Architecture - Part 3
+date: 2016-03-04
+author: Lee Atchison
+type: post
+categories:
+  - Article
+image: /images/blog/cloud-distributed-network.png
+sitemap:
+  changefreq: 'monthly'
+  priority: 0.8
+tags:
+  - Cloud
+  - Hybrid Cloud
+  - Availability
+  - Scalability
+---
+
+<p>We all know the value of distributing an application across multiple data centers. The same philosophy applies to the cloud. As we put our applications into the cloud we need to watch where in the cloud they are located. How <em>geographically</em> and <em>network topologically</em> distributed our applications are is just as important as with normal data centers.</p>
+<p>While Amazon AWS won’t tell you specifically where your application is running, they do give you enough information to make diversification decisions. Interpreting and understanding this information, and using it to your advantage, requires an understanding of how AWS is architected.</p>
+<p>In part 1 of this article, we talked about the AWS Architecture of regions and availability zones. In part 2, we went into more detail about how availability zones are structured, and how we can utilize this information. In this final part, we discuss the availability zone to data center mapping, why it is important, and how to use all this information to make sure you have the highest diversification as possible for your application.</p>
+<!--more-->
+<p>First, a bit of a recap from the previous two parts.</p>
+<p>AWS is composed of several AWS Regions, which are geographically distributed around the globe in order to provide high quality access to most locations in the world. Within a single region, there are multiple availability zones. These AZs are connected via an extremely high speed network, in order to make access between any two servers within a single region be very fast, independent of which availability zone they are actually located in. A given availability zone is composed of one or more data centers, depending on the size of the availability zone.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/blog/cloud-distributed-network.png" alt="" /></p>
+<p style="text-align: center;">Figure 1: AWS Region and AZ Network Performance</p>
+<p>Figure 1 shows the network topography within an region. As you can see, AWS is designed to make it easy to build an application within a single region but distributed across availability zones. This distribution is designed to give redundant systems failover opportunities in light of problems with individual data centers, while maintaining the ability for the independent components to communicate with each other transparently without regard to the availability zone they are in.</p>
+<h2>Availability Zones and Data Centers</h2>
+<p>Within a given account, an EC2 instance in one AZ (such as us-east-1a) and an EC2 instance in another AZ (such as us-east-1b) may safely be assumed to be in distinct data centers.</p>
+<p>However, this is not necessarily true when you are using more than one AWS account. Let's say you create an EC2 instance in account 1 that is in AZ us-east-1a, and an EC2 instance in account 2 that is in AZ us-east-1c. These two instances may, in fact, be in the same data center. They may in fact be in the same rack and on the same physical server!</p>
+<p>Why is this the case? It is because the availability zone names do not statically map directly to specific data centers. Instead, the data center(s) used for "us-east-1a" in one account may be different then the data center(s) used for "us-east-1a" in another account.</p>
+<p>When you create an AWS account, they use an algorithm to create a mapping of availability zone names to specific data centers. From the user perspective, this mapping is essentially "random". This means that one account’s view of "us-east-1a" will be physically present in a very different location than another account’s view of "us-east-1a". This is demonstrated in Table 1. Here we show a hypothetical number of data centers (arbitrarily numbered 1-8) within a single region. Then we show a hypothetical mapping between availability zone names and those data centers for four sample accounts.   </p>
+<table style="margin-left: auto; margin-right: auto;" border="1">
+<tbody>
+<tr>
+<td>Data Center</td>
+<td>AWS Account 1</td>
+<td>AWS Account 2</td>
+<td>AWS Account 3</td>
+<td>AWS Account 4</td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #1</td>
+<td>us-east-1a</td>
+<td>us-east-1d</td>
+<td> </td>
+<td>us-east-1e</td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #2</td>
+<td>us-east-1a</td>
+<td>us-east-1c</td>
+<td>us-east-1a</td>
+<td>us-east-1a</td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #3</td>
+<td>us-east-1b</td>
+<td>us-east-1a</td>
+<td>us-east-1d</td>
+<td>us-east-1d</td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #4</td>
+<td>us-east-1c</td>
+<td> </td>
+<td>us-east-1a</td>
+<td>us-east-1b</td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #5</td>
+<td>us-east-1d</td>
+<td>us-east-1b</td>
+<td>us-east-1c</td>
+<td>us-east-1c</td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #6</td>
+<td>us-east-1e</td>
+<td> </td>
+<td>us-east-1b</td>
+<td> </td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #7</td>
+<td> </td>
+<td> </td>
+<td>us-east-1e</td>
+<td> </td>
+<td>...</td>
+</tr>
+<tr>
+<td>DC #8</td>
+<td> </td>
+<td>us-east-1e</td>
+<td> </td>
+<td> </td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"> Table 1: Unexpected Availability Zone Mappings</p>
+<p> From this table you’ll notice a few things.</p>
+<ul>
+<li><strong>First</strong>, a single availability zone for an account may, in fact, be contained in multiple distinct data centers. This means the two EC2 instances you create within a single account and a single availability zone may be on the same physical server, or they could be in completely different data centers.</li>
+<li><strong>Second</strong>, two EC2 instances created in different accounts may or may not be in the same data center, even if the availability zones are different.</li>
+</ul>
+<p>For example, in Table 1, if account #1 creates an instance in us-east-1b, and account #3 creates an insteance in us-east-1d, those two instances will both be created in data center #3.</p>
+<p>It is important to remember:</p>
+<p style="padding-left: 30px;"><em><strong>Just because you have two EC2 instances in two accounts in two different availability zones, does not mean they can be assumed to be independent for availability purposes.</strong></em></p>
+<p>When using multiple AWS accounts, the AWS availability zone model does not enforce this. The availability zone model can be used to enforce this only when dealing within a single AWS account.</p>
+<p>Have you ever wondered why, when AWS announces an outage, they will say that an outage impacts "some availability zones" in a given region, but they do not say which availability zones? The reason is because of this mapping. If they have a problem in, say DC#4, that might mean your "us-east-1a", while for the next person it might be "us-east-1c". <em><strong>They cannot give the name of a specific AZ, because the name of the AZ is different for each AWS account.</strong></em></p>
+<p>Why would you ever want to use more than one AWS account? Actually, this is fairly common. Many companies create multiple AWS accounts used by different groups within the company. They may do this for billing purposes, permissions management, or other reasons.</p>
+<h2>Why Does AWS Do This Weird Mapping?</h2>
+<p>One of the main reasons why AWS does this mapping is for load balancing. When people launch EC2 instances, they tend not to launch them evenly distributed across all availability zones. In fact, "us-east-1a" is a more common AZ for people to launch EC2 instances than "us-east-1e". This is governed as much by human nature as anything. If AWS did not do this artificial remapping, then AZs earlier in the alphabet would be overloaded while AZs later in the alphabet would be less loaded. By creating this artificial mapping, they are able to load balance usage more effectively. So, the "random algorithm" they use is not so random, they make the assignments that make the most commonly used availability zone names map to the data centers with the most excess capacity at the time.</p>
+<h2>Maintaining Location and Network Topographic Diversity</h2>
+<p>How do you make sure that AWS resources you launch have redundant components that are guaranteed to be located in different data centers and therefore risk tolerant to outages?</p>
+<p>There are a couple things you can do. First, make sure that you maintain redundant components in distinct availability zones <em>within a single account</em>. If you have redundant components that are in multiple accounts, make sure you maintain redundancy in multiple availability zones <em>within each account individually</em>. Don’t compare availability zones across accounts.</p>
+<h3>Architecting for Scale</h3>
+<p>Want to learn more about this and other topics in availability, scalability, and cloud computing? Get my book, <a href="http://oreil.ly/1HbPMpb" target="_blank">Architecting for Scale</a>, published by O'Reilly Media.</p>
+<p> </p>

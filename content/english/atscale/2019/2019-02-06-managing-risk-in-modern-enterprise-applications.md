@@ -8,7 +8,7 @@ image: /images/uploads/ken-and-lee-risk-matrix-mp4.png
 tags:
   - Enterprise
   - Risk Management
-  - Architecting For Scale
+  - Architecting for Scale
 categories:
   - Interview
 related:
