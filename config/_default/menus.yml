@@ -13,7 +13,7 @@ main:
     weight: 2
   - name: "Presentations"
     parent: "Topics & Content"
-    URL: "/categories/presentation/"
+    URL: "/presentations/"
     weight: 3
   - name: "Curated Lists"
     URL: "/lists/"
