@@ -1,4 +1,3 @@
 baseURL: "http://localhost:1313"
-paginate: 20
 buildDrafts: true
 buildFuture: true

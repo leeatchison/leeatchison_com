@@ -8,9 +8,6 @@ description: >
   to speed up the migration process and learn risk management techniques to optimize your 
   migration success.
 author: "Lee Atchison"
-mobile: "123xxx456"
-email: "xxx@email.com"
-location: "XXX, Seattle, WA"
 preloader:
   enable: false
   preloader: "" # use .png, .svg, or .gif
@@ -39,6 +36,8 @@ plugins:
 
 social: #ionicon pack v2 : https://ionicons.com/v2/
   - icon: "ion-social-linkedin-outline"
+    name: leeatchison
     link: "https://linkedin.com/in/leeatchison"
   - icon: "ion-social-twitter-outline"
+    name: "leeatchison"
     link: "https://twitter.com/leeatchison"

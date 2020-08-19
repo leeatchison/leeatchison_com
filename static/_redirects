@@ -1,3 +1,6 @@
+/feed.rss /index.xml 302
+/feed.xml /index.xml 302
+/feed /index.xml 302
 /blog /atscale/ 301
 /book /architectingforscale/ 302
 /la https://leeatchison.com 302
