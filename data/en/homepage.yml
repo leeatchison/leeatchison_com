@@ -35,7 +35,7 @@ about:
 
 ######################### Portfolio ###############################
 portfolio:
-  enable : true
+  enable : false
   bg_image : "images/feature-bg.jpg" # xxx change this...
   title : "Cloud Strategist, Industry Expert"
   content : "
