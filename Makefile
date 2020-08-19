@@ -40,3 +40,6 @@ build: # Production build
 	@rm -rf ./public/ ./resources/
 	@mkdir ./public/
 	@hugo --gc --minify
+
+netlify-build: # Netlify Production Deploy
+	@curl -X POST -d {} https://api.netlify.com/build_hooks/5f3cac6478f8df44e1b9d9d8
