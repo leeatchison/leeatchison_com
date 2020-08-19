@@ -1,6 +1,6 @@
 ---
 title: "Opsramp Interview: Why Applications Fail and What to Do About It"
-date: 2020-08-20
+date: 2020-08-19T060500
 author: Lee Atchison
 type: post
 image: /images/atscale/opsramp-interview.jpg
