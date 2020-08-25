@@ -3,7 +3,6 @@ title: "Common Cloud Adoption Mistakes No 2: Lift-n-Shift is a Cloud Migration"
 date: 2020-09-02
 author: Lee Atchison
 type: post
-draft: true
 image: /images/atscale/desert.png
 description: 
 categories:

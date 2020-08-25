@@ -3,7 +3,6 @@ title: "Common Cloud Adoption Mistakes No 1: The Cloud Isn’t Secure"
 date: 2020-08-26
 author: Lee Atchison
 type: post
-draft: true
 image: /images/blog/clouds.jpg
 description: 
 categories:

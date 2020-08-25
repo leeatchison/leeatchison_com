@@ -3,7 +3,6 @@ title: "Common Cloud Adoption Mistakes No 3: Serverless Solves All My Problems"
 date: 2020-09-09
 author: Lee Atchison
 type: post
-draft: true
 image: /images/atscale/cloud-layers.png
 description: 
 categories:
