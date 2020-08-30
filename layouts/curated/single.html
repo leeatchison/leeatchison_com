@@ -13,34 +13,37 @@
 				<section class="curated-list">
 					{{ $odd := true}}
 					{{ range .Params.list }}
-						{{ if .uri }}
-							{{ $page := site.GetPage .uri }}
-							{{ with $page }}
-								<hr width="80%">
-								<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
-									<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-									{{ with .Params.image }}
-										<img src="{{.}}"/>
-									{{ end }}
-									<div class="curated-entry-summary">{{ .Summary }}</div>
-									<div class="curated-entry-link"><a href="{{ .Permalink }}">Click here to read more</a></div>
+						{{ $currDate := now.Format "2006-01-02"}}
+						{{ if le .pubdate $currDate }}
+							{{ if .uri }}
+								{{ $page := site.GetPage .uri }}
+								{{ with $page }}
+									<hr width="80%">
+									<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
+										<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+										{{ with .Params.image }}
+											<img src="{{.}}"/>
+										{{ end }}
+										<div class="curated-entry-summary">{{ .Summary }}</div>
+										<div class="curated-entry-link"><a href="{{ .Permalink }}">Click here to read more</a></div>
+										</section>
+								{{ else }}
+									<hr width="80%">
+									<section class="clearfix curated-entry curated-entry-error">
+										<div>Invalid page.</div>
 									</section>
+								{{ end }}
 							{{ else }}
 								<hr width="80%">
-								<section class="clearfix curated-entry curated-entry-error">
-									<div>Invalid page.</div>
+								<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
+									<h3><a href="{{ .url }}" target="_blank">{{ .title }}</a></h3>
+									{{ with .image }}
+										<img src="{{.}}"/>
+									{{ end }}
+									<div class="curated-entry-summary">{{ .summary }}</div>
+									<div class="curated-entry-link"><a href="{{ .url }}" target="_blank">Click here to read more</a></div>
 								</section>
 							{{ end }}
-						{{ else }}
-							<hr width="80%">
-							<section class="clearfix curated-entry {{ if $odd }}curated-entry-odd{{ $odd = false }}{{ else }}curated-entry-even{{ $odd = true }}{{ end }}">
-								<h3><a href="{{ .url }}" target="_blank">{{ .title }}</a></h3>
-								{{ with .image }}
-									<img src="{{.}}"/>
-								{{ end }}
-								<div class="curated-entry-summary">{{ .summary }}</div>
-								<div class="curated-entry-link"><a href="{{ .url }}" target="_blank">Click here to read more</a></div>
-							</section>
 						{{ end }}
 					{{ end }}
 				</section>

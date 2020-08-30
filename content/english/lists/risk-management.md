@@ -6,6 +6,8 @@ list:
   - uri: /atscale/mda/mda4-avoiding-downtime-while-migrating-data-to-the-cloud.md
   - uri: /project/learning-path-risk-management.md
   - uri: /atscale/2019/2019-02-06-managing-risk-in-modern-enterprise-applications.md
+  - uri: /atscale/mda/mda15-likelihood-and-severity.md
+    pubdate: 2020-09-02
   - uri: /architectingforscale/index.html
   - title: "Risk Management -- GeekWire Cloud Summit 2019"
     summary: >
