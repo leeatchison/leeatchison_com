@@ -9,7 +9,6 @@ categories:
   - Interview
   - Podcast
 tags:
-  - Curated List
   - Serverless
 xxxcontinue:
   name: <title>
