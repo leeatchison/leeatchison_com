@@ -1,6 +1,6 @@
 ---
 title: "The London Sunday Times: Raconteur: Serverless computer"
-date: 2017-01-16
+date: 2017-03-24
 author: Lee Atchison
 type: post
 image: /images/blog/crossing-the-gap.jpg
