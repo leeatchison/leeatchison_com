@@ -17,7 +17,6 @@ related:
     url: "/architectingforscale/"
 ---
 
-# Thinkers360: 50 Books by Thought Leaders to Read in 2021
 On December 3rd, Thinkers360 released their top 50 books by industry thought leaders that you should read in 2021.
 If you look at the second row, third book from the left, you’ll see my book, Architecting for Scale, 2nd edition.
 Each of these business and technology books are available from thought leaders across the industry.
