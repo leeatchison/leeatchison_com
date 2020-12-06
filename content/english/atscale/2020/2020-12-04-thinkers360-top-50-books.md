@@ -12,7 +12,7 @@ tags:
   - Architecting for Scale
 related:
   - name: "50 Books from Thinkers360 Thought Leaders You Should Read in 2021"
-    article_url: "[/atscale/2020/08/26/common-cloud-adoption-mistakes-no-1-the-cloud-isnt-secure/](https://www.thinkers360.com/50-books-from-thinkers360-thought-leaders-you-should-read-in-2021/)"
+    article_url: "https://www.thinkers360.com/50-books-from-thinkers360-thought-leaders-you-should-read-in-2021/"
   - name: "Architecting for Scale, 2nd Edition"
     url: "/architectingforscale/"
 ---
