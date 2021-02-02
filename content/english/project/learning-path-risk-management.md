@@ -4,7 +4,7 @@ description: "Microservices Risk Management - Building Apps that Scale"
 draft: false
 image : "/images/classes/oreilly-lp-risk-management.jpg"
 bg_image: "/images/classes/oreilly-lp-risk-management.jpg"
-category: "On Demand"
+category: "O'Reilly Media"
 information:
   - label : "Host"
     info : "O'Reilly Media"
@@ -14,7 +14,7 @@ information:
     info : "Self-paced"
   - label: "Availability"
     info: "O'Reilly Safari Members"
-weight: 1
+weight: 2
 ---
 
 ## O'Reilly Learning Path -- Risk Management

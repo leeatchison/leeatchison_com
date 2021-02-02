@@ -4,7 +4,7 @@ description: "Building Applications Using Elastic Beanstalk"
 draft: false
 image : "images/classes/pluralsight-elastic-beanstalk.png"
 bg_image: "images/classes/pluralsight-elastic-beanstalk.png"
-category: "On Demand"
+category: "PluralSight"
 information:
   - label : "Host"
     info : "PluralSight"
@@ -14,7 +14,7 @@ information:
     info : "Self-paced"
   - label: "Availability"
     info: "PluralSight Members"
-weight: 2
+weight: 3
 ---
 
 ## PluralSight -- AWS Elastic Beanstalk

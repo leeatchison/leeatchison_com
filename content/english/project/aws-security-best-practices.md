@@ -4,7 +4,7 @@ description: "Learn what cloud security is all about and how to use the principl
 draft: false
 image : "images/classes/acloudguru-aws-security.png"
 bg_image: "images/classes/acloudguru-aws-security.png"
-category: "On Demand"
+category: "A Cloud Guru"
 information:
   - label : "Host"
     info : "A Cloud Guru"

@@ -4,7 +4,7 @@ description: "Building Applications Using Elastic Beanstalk"
 draft: false
 image : "images/classes/oreilly-olt-bacr.jpg"
 bg_image: "images/classes/oreilly-olt-bacr.jpg"
-category: "Live"
+category: "O'Reilly Media"
 information:
   - label : "Host"
     info : "O'Reilly Media"
